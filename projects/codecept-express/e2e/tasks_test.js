@@ -6,4 +6,3 @@ Scenario('deve poder cadastrar uma nova tarefa',  ({ I }) => {
 	I.fillField()
 
 });
-cd
