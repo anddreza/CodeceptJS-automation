@@ -34,3 +34,7 @@ sudo netstat -tlpn | grep 8000
 # Mata processo que está rodando na porta 8000
 sudo kill -9 `sudo lsof -t -i:8000`
 sudo kill -9 $(lsof -t -i:8000)
+
+4. Aula 1: Meu primeiro teste em CodeceptJS 
+Para rodar o teste necessário no terminal de comando inserir
+$ npx codeceptjs run
