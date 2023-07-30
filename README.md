@@ -27,14 +27,22 @@ npm run dev
 
 3. Tive que matar um processo que estava rodando na 8080, usei como base esse site:
 https://valchan.com.br/kill-process-running-on-port/
-# Lista todos os processos que estão rodando
+
+3.1 Lista todos os processos que estão rodando
 sudo netstat -tlpn
-# Lista todos os processos que estão rodando na porta 8000
+
+3.2 Lista todos os processos que estão rodando na porta 8000
 sudo netstat -tlpn | grep 8000
-# Mata processo que está rodando na porta 8000
+
+3.3 Mata processo que está rodando na porta 8000
 sudo kill -9 `sudo lsof -t -i:8000`
 sudo kill -9 $(lsof -t -i:8000)
 
 4. Aula 1: Meu primeiro teste em CodeceptJS 
 Para rodar o teste necessário no terminal de comando inserir
 $ npx codeceptjs run
+
+5. Scaffold tests:
+Um recurso interessate de usar é
+$ npx codeceptjs gt 
+(o terminal irá perguntar qual feat será usada para teste)
