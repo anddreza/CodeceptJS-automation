@@ -46,3 +46,4 @@ $ npx codeceptjs run
 Um recurso interessate de usar é
 $ npx codeceptjs gt 
 (o terminal irá perguntar qual feat será usada para teste)
+
