@@ -54,4 +54,27 @@ npx codeceptjs gt
 ```
 (o terminal irá perguntar qual feat será usada para teste)
 
-#### Aula 4: Campos texto
+#### Aula 6; Validando o comportamento esperado
+	I.see(taskName, '.task-item') -> inspecionando o elemento exatamente onde está localizado
+
+
+#### Aula 7: Massa de testes dinâmica com Faker
+Importou a biblioteca 
+const { faker } = require('@faker-js/faker');
+
+
+## Módulo 4: Avançando na automação
+#### Aula 1: API Helper e Insomnia Rest
+
+1. Baixou o Insomnia para testar as rotas corretamente
+2. DELETE > http://localhost:3333/helper/tasks/Fazer compras
+
+
+#### Aula 6. Testes independentes
+POST http://localhost:3333/tasks
+
+{
+	"name": "Ler um livro de JS",
+	"is_done": false
+}
+
