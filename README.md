@@ -38,12 +38,20 @@ sudo netstat -tlpn | grep 8000
 sudo kill -9 `sudo lsof -t -i:8000`
 sudo kill -9 $(lsof -t -i:8000)
 
-4. Aula 1: Meu primeiro teste em CodeceptJS 
+## Módulo 3
+#### Aula 1: Meu primeiro teste em CodeceptJS 
 Para rodar o teste necessário no terminal de comando inserir
-$ npx codeceptjs run
+```
+npx codeceptjs run
+```
 
-5. Scaffold tests:
+
+#### Aula 3: Scaffold tests
+
 Um recurso interessate de usar é
-$ npx codeceptjs gt 
+```
+npx codeceptjs gt 
+```
 (o terminal irá perguntar qual feat será usada para teste)
 
+#### Aula 4: Campos texto
