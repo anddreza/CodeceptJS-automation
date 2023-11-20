@@ -1,11 +1,11 @@
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: './*_test.js',
+  tests: './e2e/*_test.js',
   output: './output',
   helpers: {
     Playwright: {
       browser: 'chromium',
-      url: 'http://localhost:3000',
+      url: 'http://localhost:8080',
       show: true
     }
   },
