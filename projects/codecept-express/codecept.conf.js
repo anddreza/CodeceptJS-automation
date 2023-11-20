@@ -7,6 +7,12 @@ exports.config = {
       browser: 'chromium',
       url: 'http://localhost:8080',
       show: true
+    }, 
+    REST: {
+      endpoint: 'http://localhost:3333'
+    },
+    JSONResponse: {
+      requestHelper: 'REST'
     }
   },
   include: {
