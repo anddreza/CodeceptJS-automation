@@ -7,7 +7,7 @@ exports.config = {
       browser: 'chromium',
       url: 'http://localhost:8080',
       show: true
-    }, 
+    },
     REST: {
       endpoint: 'http://localhost:3333'
     },
@@ -16,7 +16,8 @@ exports.config = {
     }
   },
   include: {
-    I: './steps_file.js'
+    I: './support/steps_file.js',
+    tasksPage: "./pages/tasks.js",
   },
   name: 'codecept-express'
 }
