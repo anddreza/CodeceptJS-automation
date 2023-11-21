@@ -35,8 +35,8 @@ sudo netstat -tlpn
 sudo netstat -tlpn | grep 8000
 
 3.3 Mata processo que está rodando na porta 8000
-sudo kill -9 `sudo lsof -t -i:8000`
-sudo kill -9 $(lsof -t -i:8000)
+sudo kill -9 `sudo lsof -t -i:8080`
+sudo kill -9 $(lsof -t -i:8080)
 
 ## Módulo 3
 #### Aula 1: Meu primeiro teste em CodeceptJS 
@@ -78,3 +78,23 @@ POST http://localhost:3333/tasks
 	"is_done": false
 }
 
+#### Aula 7. Page Objects
+```
+npx codeceptjs gpo
+```
+
+## Módulo 5. Configurações & Boas práticas
+#### Aula 2. Executando por tags
+```
+npx codeceptjs run --grep 'critical' [esse critical é como voce nomeou a tag]
+```
+
+### Aula 3. Report em HTML
+https://codecept.io/reports/#html
+```
+npm i mochawesome mocha -D
+```
+
+```
+npx codeceptjs run --reporter mochawesome
+```
