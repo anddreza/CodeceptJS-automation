@@ -98,3 +98,7 @@ npm i mochawesome mocha -D
 ```
 npx codeceptjs run --reporter mochawesome
 ```
+
+
+Certificado de conclusão: 
+<img src="certificado.png">
