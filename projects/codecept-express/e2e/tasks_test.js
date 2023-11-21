@@ -1,20 +1,25 @@
 Feature('tasks');
 
-Scenario('deve poder cadastrar uma nova tarefa',  ({ I, tasksPage }) => {
+const tasks = new DataTable(['name'])
+tasks.add(['Fazer compras'])
+tasks.add(['Estudar Javascript'])
+tasks.add(['Ler um livro de Node.js'])
 
-	const taskName = 'Fazer compras'
+Data(tasks).Scenario('deve poder cadastrar uma nova tarefa',  ({ I, tasksPage, current }) => {
+
+	const taskName = current.name
 
 	I.deleteByHelper(taskName)
 
-	I.createTask(taskName)
-	I.see(taskName, '.task-item')
+	tasksPage.create(taskName)
+	tasksPage.haveTask(taskName)
 	//.task-item
 
 
 });
 
 
-Scenario('Não deve cadastrar tarefas com nome duplicado', ({I})=> {
+Scenario('Não deve cadastrar tarefas com nome duplicado', ({I, tasksPage})=> {
 	
 	//Dado que eu tenho uma nova tarefa
 	const task = {
@@ -28,9 +33,8 @@ Scenario('Não deve cadastrar tarefas com nome duplicado', ({I})=> {
 	I.postTask(task)
 
 	//Quando tento cadastrar essa tarefa novamente
-	I.createTask(task.name)
-
+	tasksPage.create(task.name)
 	//Então deve ver uma mensagem de duplicidade
-	I.see('Task already exists!', '.swal2-html-container')
+	tasksPage.popUpHaveText('Task already exists!')
 
-});
+}).tag('critical')
